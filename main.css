@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic|Carrois+Gothic+SC);
+body {
+        background-color: #383038;
+}
+li p{
+        color: #DAFFDA;
+        font-family: 'Carrois Gothic SC', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+        
+}
+
+h3 {   color: #FFF;
+        font-family: 'Carrois Gothic SC', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+}
+
+ul {
+        list-style: none;
+}
+li {
+        display: inline-block;
+        margin: 5%;
+        
+
+}
+
+h2 {
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-size: 1.5em;
+        color: #CCFFCC;
+        font-style: italic;
+}
+
+form {
+         font-family: 'Lato', sans-serif;
+         color: #fff;
+         text-align: center;
+
+ }
+ #logo {
+         width: 20%;
+         margin: 5%;
+ }
+
+
