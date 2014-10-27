@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic|Carrois+Gothic+SC);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Josefin+Sans:300,400,600,700,400italic|Pacifico);
 body {
         background-color: #383038;
 }
@@ -18,10 +19,11 @@ h3 {   color: #FFF;
 
 ul {
         list-style: none;
+        margin: 0;
 }
 li {
         display: inline-block;
-        margin: 5%;
+        margin: 0 5% 0 5%;
         
 
 }
@@ -42,7 +44,23 @@ form {
  }
  #logo {
          width: 20%;
-         margin: 5%;
+         margin: 5% ;
  }
+ul li img {
+        background-color: #796679;
+        border-radius: 100%;
+        padding: 1.7em;
+}
 
+h1#cityName {
+         color: #DAFFDA;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        font-size: 4em;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-top: 1.25em;
+}
+
+        
 

@@ -1,18 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(){
-/*$form = document.querySelector('form');
-$form. addEventListener('submit', function(event){
-        event.preventDefault();
-        var zipcode = $form.elements["zipcode"].value;
-*/
-getJSONP(url, 'myAwesomeFunction');
-
-});
-
-
-
-var url = "http://api.wunderground.com/api/d89f318f93a1c98e/forecast10day/q/37217.json";
-
-
 function getJSONP(url, cbName){
   var $script = document.createElement('script')
   $script.src = url + '?callback=' + cbName;
@@ -20,7 +5,17 @@ function getJSONP(url, cbName){
 
 }
 
-function addItemToList($list, itemText){     
+
+function getCityName(city){
+        var $h1 = document.getElementById("cityName");
+        $h1.innerHTML = city;
+
+
+ 
+}
+
+
+function addItemToList($list, itemText){ 
 var $li = document.createElement("li");
 var $high = document.createElement("p");
 var $low = document.createElement("p");
@@ -39,27 +34,39 @@ $list.appendChild($li);
 
 }
 
-function combineString(data){
-var frag = document.createDocumentFragment(),
-             li = document.createElement('li');
-             li.innerHTML = '<p>' + " &deg; Fahrenheit";
-             frag.appendChild(li);
-}
-
 
 
 function myAwesomeFunction(data){
         var forecast = data.forecast.simpleforecast.forecastday;
 
         var $ul = document.getElementById('weatherforecast5day');
+        $ul.innerHTML = "";
 
-         for(var i = 0; i < 5; i++) {
+        for(var i = 0; i < 5; i++) {
              addItemToList($ul, forecast[i])
          }
+
+        var cityName = data.location.city;
+
+        getCityName(cityName)
 
 
 }
 
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+ var $form = document.getElementById("zipcodeForm");
+ var $zipBox = $form.querySelector("input[type='text']");
+
+ $form.addEventListener('submit', function(event){
+        event.preventDefault();
+  var url = "http://api.wunderground.com/api/d89f318f93a1c98e/geolookup/forecast10day/q/" + $zipBox.value + ".json";
+  getJSONP(url, 'myAwesomeFunction')
+
+});       
+});
 
 
 
