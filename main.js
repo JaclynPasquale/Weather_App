@@ -44,9 +44,6 @@ function myAwesomeFunction(data){
 
 }
 
-
-
-
 document.addEventListener("DOMContentLoaded", function(){
  var $form = document.getElementById("zipcodeForm");
  var $zipBox = $form.querySelector("input[type='text']");
@@ -57,7 +54,3 @@ document.addEventListener("DOMContentLoaded", function(){
   getJSONP(url, 'myAwesomeFunction')
 });       
 });
-
-
-
-
