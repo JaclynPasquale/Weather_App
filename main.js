@@ -5,15 +5,10 @@ function getJSONP(url, cbName){
 
 }
 
-
 function getCityName(city){
         var $h1 = document.getElementById("cityName");
         $h1.innerHTML = city;
-
-
- 
 }
-
 
 function addItemToList($list, itemText){ 
 var $li = document.createElement("li");
@@ -30,10 +25,7 @@ $li.appendChild($day);
 $li.appendChild($high);
 $li.appendChild($low);
 $list.appendChild($li);
-
-
 }
-
 
 
 function myAwesomeFunction(data){
@@ -50,7 +42,6 @@ function myAwesomeFunction(data){
 
         getCityName(cityName)
 
-
 }
 
 
@@ -64,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function(){
         event.preventDefault();
   var url = "http://api.wunderground.com/api/d89f318f93a1c98e/geolookup/forecast10day/q/" + $zipBox.value + ".json";
   getJSONP(url, 'myAwesomeFunction')
-
 });       
 });
 
